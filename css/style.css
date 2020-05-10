@@ -1,0 +1,229 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+body {
+  font-family: "Poppins", sans-serif; }
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto; }
+
+.main-header {
+  display: flex;
+  padding: 50px 0px 30px 0px;
+  z-index: 10; }
+  .main-header-logo {
+    flex: 1;
+    font-size: 24px;
+    font-weight: 500; }
+    .main-header-logo a {
+      text-decoration: none;
+      color: #000; }
+  .main-header-nav {
+    display: flex; }
+    .main-header-nav__item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 0;
+      background-color: lightblue;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.2s ease;
+      pointer-events: none; }
+      .main-header-nav__item__active {
+        height: 20%;
+        opacity: 1;
+        pointer-events: all; }
+    .main-header-nav__link {
+      text-decoration: none;
+      color: #fff; }
+  .main-header-hamburger {
+    margin-right: 50px;
+    cursor: pointer;
+    z-index: 10; }
+    .main-header-hamburger-menu {
+      background: none;
+      border: none; }
+      .main-header-hamburger-menu-item {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background-color: #707070;
+        color: transparent;
+        font-size: 0;
+        border: none; }
+        .main-header-hamburger-menu-item::before, .main-header-hamburger-menu-item::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: #707070;
+          left: 0;
+          z-index: 1; }
+        .main-header-hamburger-menu-item::before {
+          width: 40px;
+          top: -8px; }
+        .main-header-hamburger-menu-item::after {
+          width: 20px;
+          bottom: -8px; }
+
+.section-main-inner {
+  display: flex;
+  flex-direction: column; }
+
+.section-main-content {
+  background-color: #8cbb7f;
+  color: #fff;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-main-content-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 1050px;
+    height: 1024px;
+    background: url("../img/leafs.png") no-repeat; }
+  .section-main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; }
+  .section-main-content .main-title {
+    font-size: 250px;
+    font-weight: 500; }
+  .section-main-content .main-subtitle {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 90px; }
+  .section-main-content-action {
+    z-index: 10; }
+
+.section-main .action-btn {
+  text-decoration: none;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 15px 30px;
+  margin-right: 15px;
+  cursor: pointer; }
+
+.section-product {
+  position: relative; }
+
+.section-product-wrapper {
+  display: flex;
+  margin-top: 185px; }
+
+.section-product-content-left {
+  width: 50%; }
+  .section-product-content-left__title {
+    margin-bottom: 50px; }
+    .section-product-content-left__title h1 {
+      font-size: 64px;
+      font-weight: 500;
+      color: #698b67; }
+  .section-product-content-left__text {
+    font-size: 32px;
+    font-weight: 400;
+    color: #8d8d8d;
+    margin-bottom: 80px; }
+    .section-product-content-left__text .main__text {
+      width: 94%; }
+    .section-product-content-left__text .small__text {
+      font-size: 24px;
+      margin-top: 40px; }
+  .section-product-content-left__button {
+    margin-bottom: 210px; }
+    .section-product-content-left__button .goback-btn {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #8d8d8d;
+      background: url("../img/arrow.svg") no-repeat left;
+      background-size: 32px;
+      padding-left: 45px; }
+
+.section-product-content-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to bottom, #f1f1f1, #dfdfdf); }
+  .section-product-content-right .leafs {
+    position: absolute;
+    width: 620px;
+    height: 810px;
+    bottom: 0;
+    right: 52%;
+    z-index: 10;
+    background: url("../img/juice-leaf.png") no-repeat; }
+  .section-product-content-right .bottle-orange {
+    position: absolute;
+    width: 240px;
+    height: 720px;
+    left: 0;
+    bottom: 2.5%;
+    z-index: 15;
+    background: url("../img/orange-juice.png") no-repeat; }
+  .section-product-content-right .bottle-red {
+    position: absolute;
+    width: 240px;
+    height: 720px;
+    left: 0;
+    bottom: 2.5%;
+    z-index: 15;
+    background: url("../img/strawberry-juice.png") no-repeat; }
+  .section-product-content-right .bottle-green {
+    position: absolute;
+    width: 240px;
+    height: 720px;
+    left: 0;
+    bottom: 2.5%;
+    z-index: 15;
+    background: url("../img/kiwi-juice.png") no-repeat; }
+  .section-product-content-right .slice-orange {
+    height: 195px;
+    width: 260px;
+    right: 5%;
+    bottom: 1%;
+    position: absolute;
+    z-index: 20;
+    background: url("../img/orange.png") no-repeat; }
+  .section-product-content-right .slice-red {
+    height: 180px;
+    width: 180px;
+    right: 10%;
+    bottom: 2%;
+    position: absolute;
+    z-index: 20;
+    background: url("../img/strawberry.png") no-repeat; }
+  .section-product-content-right .slice-green {
+    height: 230px;
+    width: 230px;
+    right: 15%;
+    bottom: 1%;
+    position: absolute;
+    z-index: 20;
+    background: url("../img/kiwi.png") no-repeat; }
